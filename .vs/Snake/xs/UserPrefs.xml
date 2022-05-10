@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{27E3B7BB-7210-4DB8-2CDE-8C5F9221D3B6}|">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Snake/SnakeTail.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Objects/Skin.cs" Line="17" Column="12" NotebookId="2" />
+      <File FileName="Assets/Scripts/Player/Snake/SnakeBody.cs" Line="5" Column="68" NotebookId="2" />
+      <File FileName="Assets/Scripts/Player/Snake/SnakeHead.cs" Line="5" Column="68" NotebookId="2" />
+      <File FileName="Assets/Scripts/Player/Snake/SnakePart.cs" Line="1" Column="1" NotebookId="2" />
+      <File FileName="Assets/Scripts/Player/Snake/SnakePartBody.cs" Line="1" Column="1" NotebookId="2" />
+      <File FileName="Assets/Scripts/Player/Snake/SnakeTail.cs" Line="6" Column="2" NotebookId="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Snake" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+                <Node name="Objects" expanded="True" />
+                <Node name="Player" expanded="True">
+                  <Node name="Snake" expanded="True">
+                    <Node name="SnakeTail.cs" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="ScriptableObjects" expanded="True" />
+                <Node name="StorageInit" expanded="True" />
+                <Node name="Storages" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="56e0feab-7fe7-48b4-9c4e-ac9a0f2e337b" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
