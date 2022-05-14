@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 764d3ae78a8ff43b290ef7b101994096
+guid: 69cf299229e884c089be178b8b3b2deb
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 20
+    spritePixelsToUnits: 24
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -91,7 +91,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Snake Body Rounded
+  - name: Apple
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -100,9 +100,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 20
-      height: 20
-    spriteID: d1a7abf5169ff4475bf66f244e52378a
+      width: 22
+      height: 22
+    spriteID: b27243fef5ec84848ab1f414b3da5468
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -111,7 +111,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 3, y: 3}
   characterData:
     bones: []
     parts: []
@@ -175,12 +175,12 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Snake Body Rounded
-    spriteName: Snake Body Rounded
+  - name: Apple
+    spriteName: Apple
     isGroup: 0
     parentIndex: -1
-    spriteID: d1a7abf5169ff4475bf66f244e52378a
-    layerID: 26
+    spriteID: b27243fef5ec84848ab1f414b3da5468
+    layerID: 22
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

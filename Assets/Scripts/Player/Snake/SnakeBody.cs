@@ -23,32 +23,36 @@ public sealed class SnakeBody : SnakePartBody
         }
     }
 
-
-    private void Start() => _spriteRenderer = GetComponent<SpriteRenderer>();
+    protected override void SetComponentVar()
+    {
+        base.SetComponentVar();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     protected override void UpdateDirection(Direction direction)
     {
         if (_direction.IsEqualByModule(direction))
         {
-            if (IsRounded) base.UpdateDirection(direction);
+            base.UpdateDirection(direction);
             IsRounded = false;
             return;
         }
         else IsRounded = true;
 
 
-        Vector3 rotation = Vector3.zero;
+        float rotation = 0;
 
         if (_direction == Direction.Up)
-            rotation = direction == Direction.Left ? new(0, 0, 0) : new(0, 0, 90);
+            rotation = direction == Direction.Left ? 90 : 180;
         else if (_direction == Direction.Down)
-            rotation = direction == Direction.Left ? new(0, 0, 270) : new(0, 0, 180);
+            rotation = direction == Direction.Left ? 0 : 270;
         else if (_direction == Direction.Left)
-            rotation = direction == Direction.Up ? new(0, 0, 180) : new(0, 0, 90);
+            rotation = direction == Direction.Down ? 180 : 270;
         else if (_direction == Direction.Right)
-            rotation = direction == Direction.Up ? new(0, 0, 270) : new(0, 0, 0);
+            rotation = direction == Direction.Down ? 90 : 0;
         _direction = direction;
 
-        transform.eulerAngles = rotation;
+        _rigidbody2D.SetRotation(rotation);
     }
+
 }

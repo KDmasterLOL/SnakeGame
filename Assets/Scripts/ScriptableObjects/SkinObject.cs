@@ -14,12 +14,18 @@ class SkinObject : ScriptableObject
 
     private GameObject CreateObject(Sprite sprite)
     {
-        var obj = new GameObject();
+        var obj = new GameObject("BodyPart", typeof(SpriteRenderer),typeof(BoxCollider2D),typeof(Rigidbody2D));
+        obj.tag = Tags.Player;
 
-        obj.transform.localScale = new(1, 1, 1);
-        SpriteRenderer spriteRenderer = obj.AddComponent<SpriteRenderer>();
-        spriteRenderer.color = Color.white;
+        BoxCollider2D collider2D = obj.GetComponent<BoxCollider2D>();
+        collider2D.size = new(0.5f, 0.5f);
+
+        Rigidbody2D rigidbody2D = obj.GetComponent<Rigidbody2D>();
+        rigidbody2D.isKinematic = true;
+
+        SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprite;
+
         return obj;
     }
 }

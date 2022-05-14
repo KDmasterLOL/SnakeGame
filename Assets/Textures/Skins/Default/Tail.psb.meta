@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7cfb00cc522a8448ba6707a7944fb301
+guid: 10a4e6cfb0e81468b87a4a01e0213770
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 20
+    spritePixelsToUnits: 24
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -91,7 +91,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Snake head
+  - name: Tail
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -99,10 +99,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 2
-      y: 4
-      width: 20
-      height: 20
-    spriteID: ec8d146f97c724e548964713b26dbbed
+      y: 3
+      width: 24
+      height: 24
+    spriteID: 550645bbaf3314d9caa9db8565552f2a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -111,7 +111,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2, y: 4}
+    uvTransform: {x: 2, y: 3}
   characterData:
     bones: []
     parts: []
@@ -126,6 +126,17 @@ ScriptedImporter:
     characterGroups: []
     boneReadOnly: 0
   platformSettings:
+  - name: 
+    overridden: 0
+    maxTextureSize: 0
+    resizeAlgorithm: 0
+    textureFormat: 0
+    textureCompression: 0
+    compressionQuality: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   - name: DefaultTexturePlatform
     overridden: 0
     maxTextureSize: 2048
@@ -175,12 +186,12 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Snake head
-    spriteName: Snake head
+  - name: Tail
+    spriteName: Tail
     isGroup: 0
     parentIndex: -1
-    spriteID: ec8d146f97c724e548964713b26dbbed
-    layerID: 14
+    spriteID: 550645bbaf3314d9caa9db8565552f2a
+    layerID: 26
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

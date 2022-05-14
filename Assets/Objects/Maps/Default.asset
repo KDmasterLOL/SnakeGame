@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631d6362752f441bf95ecf89476a0e96, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
-  _map: {fileID: 0}
+  _map: {fileID: 7894498674893546052, guid: c7fcdefa3600d4f4d87e618b719d3c8a, type: 3}
+  _food: {fileID: -2177833010290896782, guid: 69cf299229e884c089be178b8b3b2deb, type: 3}

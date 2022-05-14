@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd5ea079482dc4d978a7e1dcfe064e4c
+guid: 592cfc460ac724ebe93019f41c7a74e8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 20
+    spritePixelsToUnits: 24
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -91,7 +91,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Snake Body
+  - name: Body_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -100,9 +100,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 2
       y: 4
-      width: 20
-      height: 20
-    spriteID: 827e6454ec857429693c60503f429dec
+      width: 24
+      height: 24
+    spriteID: 5228ef273caea461982238ac1c3f1c14
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -175,11 +175,11 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Snake Body
-    spriteName: Snake Body
+  - name: Body_1
+    spriteName: Body_1
     isGroup: 0
     parentIndex: -1
-    spriteID: 827e6454ec857429693c60503f429dec
+    spriteID: 5228ef273caea461982238ac1c3f1c14
     layerID: 26
     mosaicPosition: {x: 4, y: 4}
     flatten: 0

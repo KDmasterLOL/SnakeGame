@@ -9,6 +9,8 @@ public class Snake : Initialise
 
     private int _length = 0;
 
+    public SnakePart.Direction Direction => _head.CurrentDirection;
+
     public void Move(SnakePart.Direction direction)
     {
         _head.CurrentDirection = direction;
@@ -17,25 +19,31 @@ public class Snake : Initialise
 
     public void Expand()
     {
-        //var body = Instantiate(playerBody, _tail.transform.position, _tail.transform.rotation, transform).AddComponent<SnakeBody>();
-        //body.Next = _bodies[_bodies.Count - 1];
-        //_tail.Next = body;
+        SnakeBody body = SkinsStorage.Current.Body;
+
+        body.Init(transform, _tail.transform.position, _tail.CurrentDirection);
+        body.Next = _bodies[^1];
+        body.gameObject.SetActive(false);
+        _tail.Next = body;
+        _bodies.Add(body);
+        
+        _length += 1;
     }
 
     public override void Init()
     {
-        Vector2 vector = new(0, 1);
+        Vector3 position = new(0, 1, -1);
 
         _head = SkinsStorage.Current.Head;
-        _head.gameObject.SetParametrs(position: vector, parent: transform);
+        _head.Init(transform, position);
 
-        vector.y--;
+        position.y--;
         _bodies = new List<SnakeBody> { SkinsStorage.Current.Body };
-        _bodies[0].gameObject.SetParametrs(position: vector, parent: transform);
+        _bodies[0].Init(transform, position);
 
-        vector.y--;
+        position.y--;
         _tail = SkinsStorage.Current.Tail;
-        _tail.gameObject.SetParametrs(position: vector, parent: transform);
+        _tail.Init(transform, position);
 
         _tail.Next = _bodies[0];
         _bodies[0].Next = _head;

@@ -12,22 +12,23 @@ public class PlayerController : MonoBehaviour
 
     private SnakePart.Direction _direction = Up;
 
-    [SerializeField]
-    private float _timeStep = 1;
-
     private void Update()
     {
-        ProcessInput();
+        if (Input.anyKeyDown) ProcessInput();
+    }
+
+    private void FixedUpdate()
+    {
         CountTimeToMove();
     }
 
     private void CountTimeToMove()
     {
-        _pastTime += Time.deltaTime;
-        if (_pastTime >= _timeStep)
+        _pastTime += Time.fixedDeltaTime;
+        if (_pastTime >= PlayerSettings.TimeSnakeStep)
         {
             _pastTime = 0;
-            _player.Move(_direction);
+            _player._snake.Move(_direction);
         }
 
     }
@@ -44,6 +45,11 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.W))
             direction = Up;
 
-        _direction = direction;
+        if (_player._snake.Direction == direction || _player._snake.Direction.IsEqualByModule(direction) == false)
+            _direction = direction;
+    }
+    private void OnEnable()
+    {
+        SnakeHead.OnFood += () => _player._snake.Expand();
     }
 }

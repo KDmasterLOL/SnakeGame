@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5639a13e55354457f8a525b2ed277be8
+guid: 0ed035bacd1df4c69bfe96dc337a7221
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 20
+    spritePixelsToUnits: 24
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -91,7 +91,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Tail
+  - name: Head
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -99,10 +99,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 2
-      y: 3
-      width: 20
-      height: 20
-    spriteID: 856d612585bfb4b239ae5d528576a51d
+      y: 4
+      width: 24
+      height: 24
+    spriteID: 6439798d4a6f44c0eab105e2f8d5b6da
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -111,7 +111,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2, y: 3}
+    uvTransform: {x: 2, y: 4}
   characterData:
     bones: []
     parts: []
@@ -126,6 +126,17 @@ ScriptedImporter:
     characterGroups: []
     boneReadOnly: 0
   platformSettings:
+  - name: 
+    overridden: 0
+    maxTextureSize: 0
+    resizeAlgorithm: 0
+    textureFormat: 0
+    textureCompression: 0
+    compressionQuality: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   - name: DefaultTexturePlatform
     overridden: 0
     maxTextureSize: 2048
@@ -175,12 +186,12 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Tail
-    spriteName: Tail
+  - name: Head
+    spriteName: Head
     isGroup: 0
     parentIndex: -1
-    spriteID: 856d612585bfb4b239ae5d528576a51d
-    layerID: 26
+    spriteID: 6439798d4a6f44c0eab105e2f8d5b6da
+    layerID: 14
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

@@ -57,27 +57,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/Player/Snake/SnakeTail.cs" />
+    <Compile Include="Assets/Scripts/Level/Level.cs" />
     <Compile Include="Assets/Scripts/ScriptableObjects/SkinObject.cs" />
     <Compile Include="Assets/Scripts/Player/Snake.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
     <Compile Include="Assets/Scripts/Player/Snake/SnakePartBody.cs" />
+    <Compile Include="Assets/Scripts/Food.cs" />
     <Compile Include="Assets/Scripts/Storages/MapsStorage.cs" />
     <Compile Include="Assets/Scripts/Player/Snake/SnakeHead.cs" />
     <Compile Include="Assets/Scripts/StorageInit/MapsInit.cs" />
+    <Compile Include="Assets/Scripts/Tags.cs" />
     <Compile Include="Assets/Scripts/Player/Player.cs" />
     <Compile Include="Assets/Scripts/Objects/Skin.cs" />
     <Compile Include="Assets/Scripts/Interfaces/IInitialise.cs" />
     <Compile Include="Assets/Scripts/Buttons.cs" />
+    <Compile Include="Assets/Scripts/ExtensionMehods.cs" />
     <Compile Include="Assets/Scripts/ScriptableObjects/MapObject.cs" />
     <Compile Include="Assets/Scripts/Storages/Storage.cs" />
     <Compile Include="Assets/Scripts/Storages/SkinsStorage.cs" />
     <Compile Include="Assets/Scripts/StartUp.cs" />
     <Compile Include="Assets/Scripts/Objects/Map.cs" />
     <Compile Include="Assets/Scripts/StorageInit/StorageInit.cs" />
+    <Compile Include="Assets/Scripts/Function.cs" />
+    <Compile Include="Assets/Scripts/Level/LevelController.cs" />
     <Compile Include="Assets/Scripts/Player/Snake/SnakePart.cs" />
     <Compile Include="Assets/Scripts/Player/Snake/SnakeBody.cs" />
     <Compile Include="Assets/Scripts/StorageInit/SkinsInit.cs" />
-    <Compile Include="Assets/Scripts/ExtensionMehods.cs" />
+    <Compile Include="Assets/Scripts/Settings.cs" />
+    <Compile Include="Assets/Scripts/InitSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
