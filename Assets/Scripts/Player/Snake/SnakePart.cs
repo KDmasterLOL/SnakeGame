@@ -5,17 +5,19 @@ using UnityEngine;
 abstract public class SnakePart : MonoBehaviour
 {
 
-    protected Direction _direction = Direction.Up;
     protected Rigidbody2D _rigidbody2D;
+    protected Sprite SnakeSprite;
+
+    protected Direction _direction;
+
     protected bool _isInitialized = false;
+
     public virtual Direction CurrentDirection
     {
         get => _direction;
         set => UpdateDirection(value);
 
     }
-
-    protected Sprite SnakeSprite;
 
     public virtual void Move()
     {
@@ -93,7 +95,7 @@ abstract public class SnakePart : MonoBehaviour
         transform.SetParent(parent);
         transform.position = position;
         _direction = direction;
-        UpdateDirection(direction);
+        UpdateDirection(_direction);
         _isInitialized = true;
     }
 }

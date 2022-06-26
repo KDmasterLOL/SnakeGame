@@ -12,5 +12,10 @@ public abstract class SnakePartBody : SnakePart
         CurrentDirection = Next.CurrentDirection;
         Next.Move();
     }
+    protected override void SetComponentVar()
+    {
+        base.SetComponentVar();
+        gameObject.tag = Tags.Body;
+        
+    }
 }
-

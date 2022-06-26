@@ -1,8 +1,17 @@
 ﻿<Properties StartupConfiguration="{27E3B7BB-7210-4DB8-2CDE-8C5F9221D3B6}|">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6cf23905-4fd6-4bdf-8b17-9517585ea2ad" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c9d8e3ce-5029-4edf-924e-181a3a6c0cc5" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/Snake.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player/Snake.cs" Line="10" Column="29" />
+      <File FileName="Assets/Scripts/Player/Snake/SnakePart.cs" Line="99" Column="31" />
+      <File FileName="Assets/Scripts/Player/Snake/SnakePartBody.cs" Line="15" Column="2" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -11,8 +20,11 @@
               <Node name="Objects" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="Level" expanded="True" />
-                <Node name="Player" expanded="True" />
-                <Node name="InitSettings.cs" selected="True" />
+                <Node name="Menu" expanded="True" />
+                <Node name="Player" expanded="True">
+                  <Node name="Snake" expanded="True" />
+                </Node>
+                <Node name="ScriptableObjects" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -28,8 +40,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

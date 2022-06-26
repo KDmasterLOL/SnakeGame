@@ -11,7 +11,7 @@ public class LevelController : MonoBehaviour
     private void Update()
     {
         _timeLeft += Time.deltaTime;
-        if (_timeLeft >= LevelSettings.TimeFoodSpawn)
+        if (_timeLeft >= LevelSettings.IntervalFoodSpawn)
         {
             _timeLeft = 0;
             _level.GenerateFood();

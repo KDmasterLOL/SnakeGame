@@ -1,6 +1,6 @@
 public static class LevelSettings
 {
-    public static float TimeFoodSpawn;
+    public static float IntervalFoodSpawn;
 }
 public static class PlayerSettings
 {

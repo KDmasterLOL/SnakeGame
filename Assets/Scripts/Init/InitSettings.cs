@@ -7,7 +7,7 @@ public class InitSettings : Initialise
 
     public override void Init()
     {
-        LevelSettings.TimeFoodSpawn = TimeFoodSpawn;
+        LevelSettings.IntervalFoodSpawn = TimeFoodSpawn;
         PlayerSettings.TimeSnakeStep = TimeSnakeStep;
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class Snake : Initialise
+public class SnakePlayer : Initialise
 {
     private SnakeHead _head;
     private List<SnakeBody> _bodies;
@@ -26,7 +26,7 @@ public class Snake : Initialise
         body.gameObject.SetActive(false);
         _tail.Next = body;
         _bodies.Add(body);
-        
+
         _length += 1;
     }
 

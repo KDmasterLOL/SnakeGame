@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEditor;
+
 public class StartUp : MonoBehaviour
 {
     [SerializeReference]

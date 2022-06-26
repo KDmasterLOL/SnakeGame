@@ -6,7 +6,7 @@ using static SnakePart.Direction;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private Player _player;
+    private SnakePlayer Snake;
 
     private float _pastTime = 0;
 
@@ -28,9 +28,24 @@ public class PlayerController : MonoBehaviour
         if (_pastTime >= PlayerSettings.TimeSnakeStep)
         {
             _pastTime = 0;
-            _player._snake.Move(_direction);
+            Snake.Move(_direction);
         }
+        _isExpended = false;
+        Expand();
+    }
 
+    private int _registeredExpands = 0;
+    private bool _isExpended = false;
+
+    private void RegisterExpand() => _registeredExpands++;
+
+    private void Expand()
+    {
+        if (_registeredExpands == 0 || _isExpended)
+            return;
+        _registeredExpands--;
+        Snake.Expand();
+        _isExpended = true;
     }
 
     private void ProcessInput()
@@ -45,11 +60,15 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.W))
             direction = Up;
 
-        if (_player._snake.Direction == direction || _player._snake.Direction.IsEqualByModule(direction) == false)
+        if (Snake.Direction == direction || Snake.Direction.IsEqualByModule(direction) == false)
             _direction = direction;
     }
     private void OnEnable()
     {
-        SnakeHead.OnFood += () => _player._snake.Expand();
+        SnakeHead.OnTakeFood += RegisterExpand;
+    }
+    private void OnDisable()
+    {
+        SnakeHead.OnTakeFood -= RegisterExpand;
     }
 }

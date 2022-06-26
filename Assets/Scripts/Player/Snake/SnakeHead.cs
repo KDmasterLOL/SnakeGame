@@ -3,15 +3,25 @@ using System;
 
 public sealed class SnakeHead : SnakePart
 {
-    static public event Action OnFood;
-
+    static public event Action OnTakeFood;
+    static public event Action OnGameOver;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision is null) return;
         if (collision.transform.CompareTag(Tags.Food))
         {
             Destroy(collision.gameObject);
-            OnFood?.Invoke();
+            OnTakeFood?.Invoke();
         }
+        else if (collision.transform.CompareTag(Tags.Body))
+        {
+            print("Game OVER!!!");
+        }
+
+    }
+    protected override void SetComponentVar()
+    {
+        base.SetComponentVar();
+        gameObject.tag = Tags.Head;
     }
 }

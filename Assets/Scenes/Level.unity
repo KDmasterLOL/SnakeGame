@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 446400422}
-  - component: {fileID: 446400420}
   - component: {fileID: 446400419}
   m_Layer: 0
   m_Name: Player
@@ -153,21 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff02cef260aae407a9bc6976791c194d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 446400420}
-  _timeStep: 1
---- !u!114 &446400420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446400418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9208797b072154ed3821574b90916f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _snake: {fileID: 1868564100}
+  Snake: {fileID: 1868564100}
 --- !u!4 &446400422
 Transform:
   m_ObjectHideFlags: 0
@@ -225,12 +210,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216900056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc65d7391b554c948f08da7a28250bd, type: 3}
+  m_Script: {fileID: 11500000, guid: b6f70bdad26d44d98895da219a951ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _initialise:
-  - {fileID: 1868564100}
   - {fileID: 1310565422}
+  - {fileID: 1868564100}
 --- !u!1 &1310565421
 GameObject:
   m_ObjectHideFlags: 0
