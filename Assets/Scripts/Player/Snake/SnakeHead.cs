@@ -5,6 +5,7 @@ public sealed class SnakeHead : SnakePart
 {
     static public event Action OnTakeFood;
     static public event Action OnGameOver;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision is null) return;
@@ -14,10 +15,7 @@ public sealed class SnakeHead : SnakePart
             OnTakeFood?.Invoke();
         }
         else if (collision.transform.CompareTag(Tags.Body))
-        {
-            print("Game OVER!!!");
-        }
-
+            OnGameOver?.Invoke();
     }
     protected override void SetComponentVar()
     {

@@ -13,7 +13,7 @@ class MapObject : ScriptableObject
 
     public Food CreateFood(Vector3 position)
     {
-        var obj = new GameObject("Food", typeof(SpriteRenderer),typeof(BoxCollider2D), typeof(Food),typeof(Rigidbody2D));
+        var obj = new GameObject("Food", typeof(SpriteRenderer), typeof(BoxCollider2D), typeof(Food), typeof(Rigidbody2D));
         obj.tag = Tags.Food;
 
         BoxCollider2D collider2D = obj.GetComponent<BoxCollider2D>();

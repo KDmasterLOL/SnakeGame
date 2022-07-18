@@ -1,52 +1,68 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-
-public class SnakePlayer : Initialise
+using System;
+using System.Linq;
+public class Snake : MonoBehaviour
 {
-    private SnakeHead _head;
-    private List<SnakeBody> _bodies;
-    private SnakeTail _tail;
+    private SnakeEntireBody _snake;
 
-    private int _length = 0;
-
-    public SnakePart.Direction Direction => _head.CurrentDirection;
+    public SnakePart.Direction Direction => _snake.Head.CurrentDirection;
 
     public void Move(SnakePart.Direction direction)
     {
-        _head.CurrentDirection = direction;
-        _tail.Move();
+        _snake.Head.CurrentDirection = direction;
+        _snake.Tail.Move();
     }
 
     public void Expand()
     {
         SnakeBody body = SkinsStorage.Current.Body;
 
-        body.Init(transform, _tail.transform.position, _tail.CurrentDirection);
-        body.Next = _bodies[^1];
+        body.Init(transform, _snake.Tail.transform.position, _snake.Tail.CurrentDirection);
+        body.Next = _snake.Bodies.Last();
         body.gameObject.SetActive(false);
-        _tail.Next = body;
-        _bodies.Add(body);
-
-        _length += 1;
+        _snake.Tail.Next = body;
+        _snake.AddBody(body);
     }
 
-    public override void Init()
+    public void CreateSnake()
     {
         Vector3 position = new(0, 1, -1);
 
-        _head = SkinsStorage.Current.Head;
-        _head.Init(transform, position);
+        var head = SkinsStorage.Current.Head;
+        head.Init(transform, position);
 
         position.y--;
-        _bodies = new List<SnakeBody> { SkinsStorage.Current.Body };
-        _bodies[0].Init(transform, position);
+        var bodies = new List<SnakeBody> { SkinsStorage.Current.Body };
+        bodies[0].Init(transform, position);
 
         position.y--;
-        _tail = SkinsStorage.Current.Tail;
-        _tail.Init(transform, position);
+        var tail = SkinsStorage.Current.Tail;
+        tail.Init(transform, position);
 
-        _tail.Next = _bodies[0];
-        _bodies[0].Next = _head;
-        _length = 1;
+        tail.Next = bodies[0];
+        bodies[0].Next = head;
+
+        _snake = new(head, bodies, tail);
+    }
+}
+public struct SnakeEntireBody
+{
+    readonly public SnakeHead Head;
+    readonly public List<SnakeBody> Bodies;
+    readonly public SnakeTail Tail;
+    public int Length { get; private set; }
+
+    public SnakeEntireBody(SnakeHead head, List<SnakeBody> bodies, SnakeTail tail)
+    {
+        Head = head;
+        Bodies = bodies;
+        Tail = tail;
+        Length = 3;
+    }
+    public void AddBody(SnakeBody body)
+    {
+        Bodies.Add(body);
+        Length++;
     }
 }

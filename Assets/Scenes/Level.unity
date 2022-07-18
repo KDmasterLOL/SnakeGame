@@ -149,10 +149,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 446400418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff02cef260aae407a9bc6976791c194d, type: 3}
+  m_Script: {fileID: 11500000, guid: eb8d66e812f0f421eae4250eab8d01f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Snake: {fileID: 1868564100}
+  _snake: {fileID: 1868564100}
 --- !u!4 &446400422
 Transform:
   m_ObjectHideFlags: 0
@@ -214,8 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initialise:
-  - {fileID: 1310565422}
-  - {fileID: 1868564100}
+  - {fileID: 1310565424}
 --- !u!1 &1310565421
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +226,8 @@ GameObject:
   - component: {fileID: 1310565423}
   - component: {fileID: 1310565422}
   - component: {fileID: 1310565424}
+  - component: {fileID: 1310565426}
+  - component: {fileID: 1310565425}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -246,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b188586523770409ba205d32ac120656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _snake: {fileID: 446400419}
 --- !u!4 &1310565423
 Transform:
   m_ObjectHideFlags: 0
@@ -274,6 +276,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _level: {fileID: 1310565422}
+--- !u!114 &1310565425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310565421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e932702b3298e4a5a985e10641ec86a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxAttemps: 3
+--- !u!114 &1310565426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310565421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871775aad13d347aca1971592c09cca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodsLevel: {fileID: 1310565425}
 --- !u!1 &1868564099
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1868564099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2c2751a026904daebb5bb697532967e, type: 3}
+  m_Script: {fileID: 11500000, guid: 74d11a921f6634f61adc8f3de9a000d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1868564101
@@ -329,6 +357,7 @@ GameObject:
   - component: {fileID: 1941377018}
   - component: {fileID: 1941377017}
   - component: {fileID: 1941377016}
+  - component: {fileID: 1941377020}
   - component: {fileID: 1941377019}
   m_Layer: 0
   m_Name: Main Camera
@@ -365,9 +394,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.11388889
+    width: 0.23333335
+    height: 0.2074074
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -412,14 +441,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 1941377015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
   m_AssetsPPU: 24
   m_RefResolutionX: 360
   m_RefResolutionY: 180
+  m_CropFrame: 4
+  m_GridSnapping: 1
   m_UpscaleRT: 0
-  m_PixelSnapping: 1
+  m_PixelSnapping: 0
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &1941377020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941377015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2

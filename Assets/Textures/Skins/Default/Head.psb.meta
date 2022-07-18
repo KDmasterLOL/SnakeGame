@@ -98,11 +98,11 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2
+      x: 4
       y: 4
-      width: 24
+      width: 20
       height: 24
-    spriteID: 6439798d4a6f44c0eab105e2f8d5b6da
+    spriteID: 25b0cc2a24966481d895d7cca306eeab
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -126,17 +126,6 @@ ScriptedImporter:
     characterGroups: []
     boneReadOnly: 0
   platformSettings:
-  - name: 
-    overridden: 0
-    maxTextureSize: 0
-    resizeAlgorithm: 0
-    textureFormat: 0
-    textureCompression: 0
-    compressionQuality: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
   - name: DefaultTexturePlatform
     overridden: 0
     maxTextureSize: 2048
@@ -190,7 +179,7 @@ ScriptedImporter:
     spriteName: Head
     isGroup: 0
     parentIndex: -1
-    spriteID: 6439798d4a6f44c0eab105e2f8d5b6da
+    spriteID: 25b0cc2a24966481d895d7cca306eeab
     layerID: 14
     mosaicPosition: {x: 4, y: 4}
     flatten: 0

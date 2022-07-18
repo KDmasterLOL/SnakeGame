@@ -1,21 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelController : MonoBehaviour
+public class LevelController : Initialise
 {
     [SerializeField]
     private Level _level;
-
-    private float _timeFood = 5, _timeLeft;
+    
 
     private void Update()
     {
-        _timeLeft += Time.deltaTime;
-        if (_timeLeft >= LevelSettings.IntervalFoodSpawn)
-        {
-            _timeLeft = 0;
-            _level.GenerateFood();
-        }
+        
+    }
+    private void OnEnable()
+    {
+        SnakeHead.OnGameOver += _level.GameOver;
+    }
+    private void OnDisable()
+    {
+        SnakeHead.OnGameOver -= _level.GameOver;
+    }
+
+    public override void Init()
+    {
+        _level.CreateMap();
+        _level.InitPlayer();
     }
 }
 
